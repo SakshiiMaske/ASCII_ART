@@ -1,0 +1,35 @@
+<div class="ascii-container">
+  <h1>ASCII</h1>
+
+  <canvas></canvas>
+
+  <div class="controls">
+    <label>Characters</label>
+    <input type="text" [(ngModel)]="characters">
+
+    <label>Font</label>
+    <select [(ngModel)]="font">
+      <option>Martian Mono</option>
+      <option>Courier New</option>
+      <option>Monaco</option>
+    </select>
+
+    <label>Size</label>
+    <input type="range" min="1" max="100" [(ngModel)]="size">
+
+    <label>Brightness</label>
+    <input type="range" min="0" max="1" step="0.1" [(ngModel)]="brightness">
+
+    <label>Fill</label>
+    <button (click)="toggleFill()">{{ fill ? 'Yes' : 'No' }}</button>
+
+    <label>Color Mode</label>
+    <select [(ngModel)]="colorMode">
+      <option>RGB</option>
+      <option>Grayscale</option>
+    </select>
+
+    <label>Backdrop</label>
+    <input type="color" [(ngModel)]="backdropColor">
+  </div>
+</div>
